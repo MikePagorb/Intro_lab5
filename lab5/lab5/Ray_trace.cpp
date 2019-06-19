@@ -39,8 +39,8 @@ void RayTracer::tracer() {
 		for (int y = 0; y < Height; y++) {
 			screenBuffer[x][y] = false;
 			
-			float xNorm = (x - Width / 2) / (float)Width;
-			float yNorm = -(y - Height / 2) / (float)Height;
+			float xNormal = (x - Width / 2) / (float)Width;
+			float yNormal = -(y - Height / 2) / (float)Height;
 
 			float distanceToPlaneFromCamera = (cameraPos - planeOrigin).length();
 			
@@ -49,7 +49,7 @@ void RayTracer::tracer() {
 			
 			float realPlaneHeight = (float)(distanceToPlaneFromCamera * tan(fovInRad));
 
-			Coordinate temp(xNorm * realPlaneHeight / 2, yNorm * realPlaneHeight / 2, 0);
+			Coordinate temp(xNormal * realPlaneHeight / 2, yNormal * realPlaneHeight / 2, 0);
 			Coordinate positionOnPlane = planeOrigin + temp;
 
 			Coordinate rayDirection = positionOnPlane - cameraPos;
