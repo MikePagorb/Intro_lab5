@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 
-#define M_PI            3.14159265358979323846
+#define PI            3.14159265358979323846
 
 RayTracer::RayTracer() {
 
@@ -44,7 +44,7 @@ void RayTracer::tracer() {
 
 			float distanceToPlaneFromCamera = (cameraPos - planeOrigin).length();
 			
-			float fovInRad = fov / (float)180 * M_PI;
+			float fovInRad = fov / (float)180 * PI;
 
 			
 			float realPlaneHeight = (float)(distanceToPlaneFromCamera * tan(fovInRad));
