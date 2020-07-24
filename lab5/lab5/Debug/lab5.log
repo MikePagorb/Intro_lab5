@@ -1,0 +1,3 @@
+﻿  Ray_trace.cpp
+e:\github\works\intro_lab5\lab5\lab5\ray_trace.cpp(47): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+  lab5.vcxproj -> E:\GitHub\Works\Intro_Lab5\lab5\Debug\lab5.exe

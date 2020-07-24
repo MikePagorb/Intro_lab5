@@ -30,7 +30,7 @@ void RayTracer::tracer() {
 	for (int i = 0; i < Height; i++)
 		screenBuffer[i] = new bool[Height];
 
-	Coordinate A(0, 0, 0);
+	Coordinate A(-1, -1, -1);
 	Coordinate B(-2, 1, 0);
 	Coordinate C(1, 1, 0);
 	Triangle triangleToDraw(A, B, C);
@@ -49,7 +49,7 @@ void RayTracer::tracer() {
 			
 			float realPlaneHeight = (float)(distanceToPlaneFromCamera * tan(fovInRad));
 
-			Coordinate temp(xNormal * realPlaneHeight / 2, yNormal * realPlaneHeight / 2, 0);
+			Coordinate temp(xNormal*realPlaneHeight / 2, yNormal*realPlaneHeight / 2, 0);
 			Coordinate positionOnPlane = planeOrigin + temp;
 
 			Coordinate rayDirection = positionOnPlane - cameraPos;
